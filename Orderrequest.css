@@ -1,0 +1,208 @@
+/* ===============================
+   GLOBAL RESET
+==================================*/
+.order-container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ====================================================
+   MAIN CONTAINER
+======================================================*/
+.order-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1250px;       /* ↓ reduced width for better responsiveness */
+  margin: 15px auto;
+  padding: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* =============================
+   LEFT SECTION
+===============================*/
+.order-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.title {
+  font-size: 30px;
+  color: #003d80;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.desc {
+  line-height: 1.6;
+  color: #5a5a5a;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.order-details .detail-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  gap: 10px;
+}
+
+.icon {
+  color: #0059b3;
+  font-size: 26px;
+  margin-top: 3px;
+}
+
+.detail-text {
+  font-size: 17px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* =============================
+   RIGHT SIDE FORM (Reduced Size)
+===============================*/
+.order-right {
+  flex: 0.8;                       /* ↓ Smaller width */
+  min-width: 290px;
+  background: #ffffff;
+  padding: 18px;                   /* ↓ Reduced padding */
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e6e6e6;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #003d80;
+}
+
+/* Inputs */
+.input-box,
+.textarea-box {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field,
+.textarea-field {
+  padding: 12px;
+  border: 1px solid #c5c5c5;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #f8f8f8;
+  transition: 0.3s ease;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+  border-color: #0059b3;
+  background: #ffffff;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #003d80;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #002a59;
+}
+
+/* =============================
+   MOBILE RESPONSIVE
+===============================*/
+@media (max-width: 480px) {
+  .order-container {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+
+  .detail-text {
+    font-size: 13px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .order-right {
+    padding: 15px;              /* ↓ smaller box */
+    flex: 1;
+  }
+
+  .form-title {
+    font-size: 18px;
+  }
+
+  .input-field,
+  .textarea-field {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* =============================
+   TABLETS
+===============================*/
+@media (max-width: 900px) {
+  .order-container {
+    flex-direction: column;
+    max-width: 95%;
+    gap: 25px;
+  }
+
+  .order-right {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+}
+
+/* =============================
+   LARGE SCREENS
+===============================*/
+@media (min-width: 1600px) {
+  .order-container {
+    max-width: 1500px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .desc {
+    font-size: 20px;
+  }
+
+  .order-right {
+    padding: 30px;
+  }
+}

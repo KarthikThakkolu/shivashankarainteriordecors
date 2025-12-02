@@ -1,0 +1,244 @@
+/* ================================
+   🌐 MAIN NAVBAR CONTAINER
+================================ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004d99;
+  color: white;
+  padding: 10px 22px;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ================================
+   🔥 LOGO + BRAND NAME
+================================ */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+/* ================================
+   🔥 HAMBURGER BUTTON
+================================ */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================================
+   🔥 DESKTOP MENU
+================================ */
+.navbar-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar-item {
+  position: relative;
+  font-size: 16px;
+}
+
+.home-navbar {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.home-navbar:hover {
+  color: #cce0ff;
+}
+
+/* ================================
+   🔥 PROFILE BUTTONS
+================================ */
+.navbar-profile {
+  display: flex;
+  gap: 12px;
+}
+
+.profile-btn,
+.logout-btn {
+  background: white;
+  color: #004d99;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.profile-btn:hover,
+.logout-btn:hover {
+  background-color: #cce0ff;
+}
+
+/* ================================
+   🔥 DROPDOWN (DESKTOP)
+================================ */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  min-width: 200px;
+  padding: 8px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+  z-index: 5000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 10px 20px;
+  color: #004d99;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown-link:hover {
+  background: #f0f0f0;
+}
+
+/* ================================
+   📱 RESPONSIVE – MOBILE & TABLET
+================================ */
+
+/* 🔹 Max width 1024px (Tablet Landscape) */
+@media (max-width: 1024px) {
+  .brand-name { font-size: 18px; }
+  .navbar-menu { gap: 22px; }
+  .logo-img { width: 50px; height: 50px; }
+}
+
+/* 🔹 Max width 900px (Tablet Portrait) */
+@media (max-width: 900px) {
+  .navbar { padding: 8px 18px; }
+  .brand-name { font-size: 17px; }
+}
+
+/* 🔹 Max width 768px (Mobile Menu Activated) */
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+
+  .navbar-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #004d99;
+    padding: 20px 0;
+    gap: 18px;
+    display: none;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-profile {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Dropdown inside Mobile */
+  .dropdown-menu {
+    position: static;
+    background: none;
+    box-shadow: none;
+    display: none;
+    padding: 0;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .dropdown-link {
+    color: white;
+    padding: 10px 0px;
+  }
+}
+
+/* 🔹 Max width 600px */
+@media (max-width: 600px) {
+  .logo-img { width: 45px; height: 45px; }
+  .brand-name { font-size: 16px; }
+}
+
+/* 🔹 Max width 425px (Large Mobile) */
+@media (max-width: 425px) {
+  .brand-name { font-size: 15px; }
+  .logo-img { width: 42px; height: 42px; }
+}
+
+/* 🔹 Max width 375px (Medium Mobile) */
+@media (max-width: 375px) {
+  .brand-name { font-size: 14px; }
+  .navbar { padding: 5px 10px; }
+}
+
+/* 🔹 Max width 320px (Small Phones) */
+@media (max-width: 320px) {
+  .brand-name { font-size: 13px; }
+  .logo-img { width: 38px; height: 38px; }
+}
+
+/* ================================
+   🖥️ RESPONSIVE – LARGE SCREENS
+================================ */
+
+/* 1440px (Large Desktop) */
+@media (min-width: 1440px) {
+  .navbar { padding: 15px 50px; }
+  .brand-name { font-size: 24px; }
+}
+
+/* 1920px (Full HD Monitor) */
+@media (min-width: 1920px) {
+  .navbar { padding: 20px 70px; }
+  .brand-name { font-size: 26px; }
+  .logo-img { width: 65px; height: 65px; }
+}
+
+/* 2560px (2K / 4K) */
+@media (min-width: 2560px) {
+  .navbar { padding: 25px 120px; }
+  .brand-name { font-size: 32px; }
+  .logo-img { width: 80px; height: 80px; }
+  .navbar-menu { gap: 45px; }
+}
